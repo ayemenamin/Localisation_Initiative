@@ -17,13 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('front.home');
 });
- Route::group(['middleware' => ['auth','isAdmin']], function () {
 
-     Route::get('/dashboard', function () {
-        return 'Admin';
-     });
- 
-  });
 // Route::get('/index', function () {
 //     return view('front.home');
 // });
