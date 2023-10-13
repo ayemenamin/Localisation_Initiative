@@ -24,8 +24,26 @@
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
+                
+                @guest
+                @if (Route::has('login'))
                 <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
-
+                @endif
+                @else
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> {{ Auth::user()->name }}</a>
+                    <div class="dropdown-menu">
+                        <a href="single.html" class="dropdown-item">My Profil</a>
+                        <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+                       
+                       
+                    </div>
+                </div>
+                @endguest
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>
