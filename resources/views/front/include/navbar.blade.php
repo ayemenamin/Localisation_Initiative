@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
                 <a href="index.html" class="nav-item nav-link active">{{__('messages.home')}}</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="about.html" class="nav-item nav-link">{{__('messages.ab')}}</a>
                 <a href="causes.html" class="nav-item nav-link">Causes</a>
                 <a href="event.html" class="nav-item nav-link">Events</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>

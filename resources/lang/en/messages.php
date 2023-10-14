@@ -14,6 +14,7 @@ return [
     */
 
     'home' => 'Home',
+    'ab'=> 'About'
 
 
 ];
