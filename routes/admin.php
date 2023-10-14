@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::group(['middleware' => ['auth','isAdmin']], function () {
-
-     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-     });
- 
-  });
-// Route::get('/index', function () {
-//     return view('front.home');
-// });
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth', 'isAdmin'])->group(function() {
+   Route::get('/dashboard',[FrontendController::class,'index']);
+
+       ####################### Main Categorey Route ###########################
+       Route::group(['prefix' => 'main_categories'], function(){
+         Route::get('/home Page',[FrontendController::class,'home'])->name('home.index');
+        
+     });
+     ####################### Main Categorey Route ###########################
+});

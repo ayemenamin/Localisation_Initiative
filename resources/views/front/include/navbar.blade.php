@@ -8,11 +8,18 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="index.html" class="nav-item nav-link active">{{__('messages.home')}}</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="causes.html" class="nav-item nav-link">Causes</a>
                 <a href="event.html" class="nav-item nav-link">Events</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+       
+                    <a rel="alternate" class="nav-item nav-link" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+             
+            @endforeach
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu">

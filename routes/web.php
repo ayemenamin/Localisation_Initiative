@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('front.home');
 });
+// routes/web.php
+
+Route::group(['prefix' => LaravelLocalization ::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function()
+{
+	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+	Route::get('/', function()
+	{
+        return view('front.home');
+	});
+
+
+});
+
+/** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
+
 
 // Route::get('/index', function () {
 //     return view('front.home');
