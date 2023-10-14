@@ -10,7 +10,7 @@
                         <img src="{{asset('assets/front/img/back1.jpeg')}}" alt="Image">
                     </div>
                     <div class="carousel-text">
-                        <h1>Localisation Initiative</h1>
+                        <h1>Let's be kind for children</h1>
                         <p>
                             Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                         </p>
