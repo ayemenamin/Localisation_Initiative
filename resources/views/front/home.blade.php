@@ -5,14 +5,16 @@
       <div class="carousel">
         <div class="container-fluid">
             <div class="owl-carousel">
+                
+                @foreach ($welcoms as $welcom)
                 <div class="carousel-item">
                     <div class="carousel-img">
-                        <img src="{{asset('assets/front/img/back1.jpeg')}}" alt="Image">
+                        <img src="{{asset('assets/uploads/home/'. $welcom->image)}}" alt="Image">
                     </div>
                     <div class="carousel-text">
-                        <h1>Let's be kind for children</h1>
+                        <h1>{{$welcom->title}}</h1>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                            {{$welcom->sub_title}}
                         </p>
                         <div class="carousel-btn">
                             <a class="btn btn-custom" href="">Donate Now</a>
@@ -20,21 +22,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="carousel-img">
-                        <img src="{{asset('assets/front/img/back2.jpeg')}}" alt="Image">
-                    </div>
-                    <div class="carousel-text">
-                        <h1>Get Involved with helping hand</h1>
-                        <p>
-                            Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
-                        </p>
-                        <div class="carousel-btn">
-                            <a class="btn btn-custom" href="">Donate Now</a>
-                            <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+               
+
                 <div class="carousel-item">
                     <div class="carousel-img">
                         <img src="{{asset('assets/front/img/back3.jpeg')}}" alt="Image">
@@ -406,6 +396,7 @@
     <!-- Event Start -->
     <div class="event">
         <div class="container">
+            
             <div class="section-header text-center">
                 <p>Upcoming Events</p>
                 <h2>Be ready for our upcoming charity events</h2>
@@ -455,86 +446,6 @@
     <!-- Event End -->
 
 
-    <!-- Team Start -->
-    <div class="team">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Meet Our Team</p>
-                <h2>Awesome guys behind our charity activities</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/front/img/team-1.jpg')}}" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                            <h2>Donald John</h2>
-                            <p>Founder & CEO</p>
-                            <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/front/img/team-2.jpg')}}" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                            <h2>Adam Phillips</h2>
-                            <p>Chef Executive</p>
-                            <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/front/img/team-3.jpg')}}" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                            <h2>Thomas Olsen</h2>
-                            <p>Chef Advisor</p>
-                            <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/front/img/team-4.jpg')}}" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                            <h2>James Alien</h2>
-                            <p>Advisor</p>
-                            <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
     
     
     <!-- Volunteer Start -->

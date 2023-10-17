@@ -1,0 +1,12 @@
+.section-top-border {
+    padding: 50px 0;
+    border-top: 1px dotted #eee;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.generic-blockquote {
+    padding: 30px 50px 30px 30px;
+    background: #f9f9ff;
+    border-left: 2px solid #ff5e13;
+}

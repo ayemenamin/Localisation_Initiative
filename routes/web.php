@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\Site\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,10 @@ Route::get('/', function () {
 Route::group(['prefix' => LaravelLocalization ::setLocale(),'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function()
 {
 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-	Route::get('/', function()
-	{
-        return view('front.home');
-	});
+	Route::get('/',[SiteController ::class,'index'])->name('site.index');
+	Route::get('/about',[SiteController ::class,'about'])->name('site.about');
+	
+
 
 
 });

@@ -14,7 +14,18 @@ return [
     */
 
     'home' => 'Home',
-    'ab'=> 'About'
+    'ab'=> 'About',
+    'about_us'=> 'About Us',
+
+
+
+    'Initiatives_and_difficulties' => 'Initiatives&difficulties',
+    'Initiatives_and_difficulties_details' => 'Regarding the most important initiatives currently in place, he says: Currently, work is being done within the Tamdeen Youth Foundation initiative to localize and improve response mechanisms, and this work is being done with a number of local actors and in partnership with international partners such as ICVA and HAG to develop a national measurement mechanism for Yemen, as well as within the project to develop a national strategy and implementation plans in partnership with all... The actors',
+
+
+    
+
+
 
 
 ];

@@ -24,6 +24,9 @@
 
         <!-- Template Stylesheet -->
         <link href="{{asset('assets/front/css/style.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/front/css/custom.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/front/css/owl.carousel.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/front/css/owl.theme.default.min.css')}}" rel="stylesheet">
     </head>
 
     <body>
@@ -67,5 +70,9 @@
 
         <!-- Template Javascript -->
         <script src="{{asset('assets/front/js/main.js')}}"></script>
+        <script src="{{asset('assets/front/js/owl.carousel.min.js')}}"></script>
+        <script>
+          
+        </script>
     </body>
 </html>

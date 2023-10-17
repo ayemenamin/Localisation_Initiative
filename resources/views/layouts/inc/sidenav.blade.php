@@ -17,6 +17,25 @@
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
+        <!-- Add the necessary Bootstrap CDN links in your HTML file -->
+<!-- Assuming you have included Bootstrap CSS and JS files -->
+
+<!-- Example of a dropdown within the list item -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">table_view</i>
+      </div>
+      <span class="nav-link-text ms-1">Pages</span>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{{route('homepage.index')}}">Home Page</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</li>
+
         <li class="nav-item">
           <a class="nav-link text-white {{Request::is('categories') ? 'active bg-gradient-primary' : '';}}" href="{{url('categories')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -25,7 +44,7 @@
             <span class="nav-link-text ms-1">Category</span>
           </a>
         </li>
-
+        
         <li class="nav-item">
           <a class="nav-link text-white {{Request::is('add-category') ? 'active bg-gradient-primary' : '';}}" href="{{url('add-category')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -61,6 +80,7 @@
             <span class="nav-link-text ms-1">Virtual Reality</span>
           </a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link text-white " href="../pages/rtl.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
