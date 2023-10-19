@@ -16,6 +16,7 @@ return [
     'home' => 'Home',
     'ab'=> 'About',
     'about_us'=> 'About Us',
+    'title_home'=>'Home',
 
 
 

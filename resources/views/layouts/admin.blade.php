@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('admin/img/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('admin//img/favicon.png') }}">
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -15,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
     <!-- Nucleo Icons -->
+    <script src="{{ asset('admin/js/ckeditor.js') }}" defer></script>
     <link href="{{ asset('admin/css/nucleo-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/css/nucleo-svg.css') }}" rel="stylesheet" />
   <!-- Font Awesome Icons -->

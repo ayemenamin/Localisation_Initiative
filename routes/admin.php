@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FrontendController;
 use App\Http\Controllers\Admin\WelcomPageController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Models\WelcomePage;
 
 /*
@@ -35,4 +36,16 @@ Route::middleware(['auth', 'isAdmin'])->group(function() {
         
      });
      ####################### Main Categorey Route ###########################
+
+         ####################### New Route ###########################
+         Route::group(['prefix' => 'News'], function(){
+          Route::get('/',[NewsController::class,'index'])->name('news.index');
+          Route::get('creat',[NewsController::class,'create'])->name('admin.news.create');
+          Route::post('store',[NewsController::class,'store'])->name('admin.news.store');
+          Route::get('edit/{id}', [NewsController::class,'edit' ])->name('news.edit');
+          Route::post('update/{id}', [NewsController::class,'update' ])->name('admin.news.update');
+          Route::get('delet/{id}', [WelcomPageController::class,'destroy' ])->name('admin.news.delet');
+         
+      });
+      ####################### Main Categorey Route ###########################
 });

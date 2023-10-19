@@ -1,6 +1,14 @@
 @extends('layouts.site')
-
+@section('title')
+{{__('messages.title_home')}}
+@endsection
 @section('content')
+<style>
+       .carousel-img img {
+        width: 100%;
+        height: auto;
+    }
+</style>
       <!-- Carousel Start -->
       <div class="carousel">
         <div class="container-fluid">
@@ -8,7 +16,7 @@
                 
                 @foreach ($welcoms as $welcom)
                 <div class="carousel-item">
-                    <div class="carousel-img">
+                    <div class="carousel-img carousel-img-responsive">
                         <img src="{{asset('assets/uploads/home/'. $welcom->image)}}" alt="Image">
                     </div>
                     <div class="carousel-text">
@@ -264,6 +272,109 @@
                     <div class="causes-btn">
                         <a class="btn btn-custom">Learn More</a>
                         <a class="btn btn-custom">Donate Now</a>
+                    </div>
+                </div>
+                <div class="causes-item">
+                    <div class="causes-img">
+                        <img src="{{asset('assets/front/img/causes-1.jpg')}}" alt="Image">
+                    </div>
+                    <div class="causes-progress">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="progress-text">
+                            <p><strong>Raised:</strong> $100000</p>
+                            <p><strong>Goal:</strong> $50000</p>
+                        </div>
+                    </div>
+                    <div class="causes-text">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    </div>
+                    <div class="causes-btn">
+                        <a class="btn btn-custom">Learn More</a>
+                        <a class="btn btn-custom">Donate Now</a>
+                    </div>
+                </div>
+                <div class="causes-item">
+                    <div class="causes-img">
+                        <img src="{{asset('assets/front/img/causes-3.jpg')}}" alt="Image">
+                    </div>
+                    <div class="causes-progress">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="progress-text">
+                            <p><strong>Raised:</strong> $100000</p>
+                            <p><strong>Goal:</strong> $50000</p>
+                        </div>
+                    </div>
+                    <div class="causes-text">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    </div>
+                    <div class="causes-btn">
+                        <a class="btn btn-custom">Learn More</a>
+                        <a class="btn btn-custom">Donate Now</a>
+                    </div>
+                </div>
+                <div class="causes-item">
+                    <div class="causes-img">
+                        <img src="{{asset('assets/front/img/causes-4.jpg')}}" alt="Image">
+                    </div>
+                    <div class="causes-progress">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="progress-text">
+                            <p><strong>Raised:</strong> $100000</p>
+                            <p><strong>Goal:</strong> $50000</p>
+                        </div>
+                    </div>
+                    <div class="causes-text">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                    </div>
+                    <div class="causes-btn">
+                        <a class="btn btn-custom">Learn More</a>
+                        <a class="btn btn-custom">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Causes End -->
+
+
+     <!-- Causes Start -->
+     <div class="causes">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Popular Causes</p>
+                <h2>Let's know about charity causes around the world</h2>
+            </div>
+            <div class="owl-carousel causes-carousel">
+                <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="blog-item bg-light rounded overflow-hidden">
+                        <div class="blog-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="{{asset('assets/front/img/causes-1.jpg')}}" alt="">
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex mb-3">
+                                <small class="detailsinfo me-4"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                            </div>
+                            <h4 class="mb-3">How to build a website</h4>
+                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="causes-item">

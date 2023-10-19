@@ -29,11 +29,20 @@
       <span class="nav-link-text ms-1">Pages</span>
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><a class="dropdown-item" href="{{route('homepage.index')}}">Home Page</a></li>
+      <li><a class="dropdown-item"  href="{{route('homepage.index')}}">Home Page</a></li>
       <li><a class="dropdown-item" href="#">Another action</a></li>
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link text-white {{Request::is('News') ? 'active bg-gradient-primary' : '';}}"  href="{{route('news.index')}}">
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">table_view</i>
+    </div>
+    <span class="nav-link-text ms-1">News</span>
+  </a>
 </li>
 
         <li class="nav-item">
